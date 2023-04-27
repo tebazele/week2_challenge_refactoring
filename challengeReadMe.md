@@ -32,16 +32,16 @@ and
 onclick='updatePlayerOneScore(<PUT YOUR ARGUMENT IN HERE)'
 ```
 
-## Part 3: Refactor into a single function
+## Part 3: Refactor into a single updateScore function
 
-Thus far, we've been using the variables `playerOneScore` and `playerTwoScore` that we declared at the top of our `app.js` file. Instead of declaring global variables (that can be changed by our user in the console--yikes!), let's create a `players` object with the player numbers ('One' and 'Two') as the keys and the player scores as values. Let's start the scores at 0. 
+Thus far, we've been using the variables `playerOneScore` and `playerTwoScore` that we declared at the top of our `app.js` file. Instead of declaring global variables (that can be changed by our user in the console--yikes!), let's create a `players` object with the player numbers ('One' and 'Two') as the *keys* and the player scores as *values*. Let's start the scores at 0. 
 
-Inside your object, your key: value pairs should look like something this:
+Inside your object, your *key: value* pairs should look like something this:
 ```js
 One: 0
 ```
 
-Now, let's refactor our update score functions even further into just one function that has two parameters - `pointValue` and `key`.
+Now, let's refactor our updatePlayerScore functions even further into just one function that has two parameters - `pointValue` and `key`.
 
 When you *invoke* (call) your functions `onclick`, make sure to pass in either 'One' or 'Two' as the argument for `key` depending on which player you're targeting with each function call.
 
@@ -51,6 +51,12 @@ Let's also rewrite our draw function and pass the `key` parameter into it so we 
 
 ```js
 object[key] = value
+```
+
+#### HINT 2: If you want, try using string interpolation to target the element ID in the updateScreen(key) function on this line
+
+```js
+document.getElementById(`playerOne-points`)
 ```
 ### Again, DON'T FORGET
 

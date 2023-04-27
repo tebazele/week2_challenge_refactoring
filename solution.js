@@ -52,9 +52,9 @@ function updateScreen() {
 // FIXME Refactor these 4 functions into one function that takes in two arguments -- playerNumber, pointValue
 
 // NOTE create an object with the player number as the key and the player score as the value
-let players = {
-    One: 0,
-    Two: 0
+const players = {
+    'One': 0,
+    'Two': 0
 }
 
 /** 
@@ -63,11 +63,10 @@ let players = {
  * @param {string} key 
  * */
 function updateScore(pointValue, key) {
-    // YOUR CODE HERE
-
-    updateScreen2()
+    players[key] += pointValue
+    updateScreen2(key)
 }
 
 function updateScreen2(key) {
-    document.getElementById('playerTwo-points').innerText = players[key]
+    document.getElementById(`player${key}-points`).innerText = players[key]
 }

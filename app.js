@@ -50,7 +50,7 @@ function updateScreen() {
 // FIXME Refactor these 4 functions into one function that takes in two arguments -- playerNumber, pointValue
 
 // NOTE create an object with the player number as the key and the player score as the value
-let players = {
+const players = {
     // YOUR CODE HERE
 }
 
